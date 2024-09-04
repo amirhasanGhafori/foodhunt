@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useCallback } from "react";
 import MealItemForm from "./MealItemForm";
 import CartContext from "../../../store/cart-context";
 
@@ -21,28 +21,29 @@ const MealItem = (props) => {
     }
   },[cartCtx.items])
   
-  const addToCartHandler = amount=>{
+  const addToCartHandler = useCallback((amount)=>{
     setShootImage(true);
-    cartCtx.addItem({
-      id:props.id,
-      name:props.name,
-      amount:amount,
-      price:props.price
-    });
-  }
+      cartCtx.addItem({
+        id:props.id,
+        name:props.name,
+        amount:amount,
+        price:props.price
+      })
+  },[]);
+
   return (
-    <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="flex justify-center max-h-80 h-80">
         <img className={`rounded-t-lg max-h-80 opacity-100`} src={props.img} alt={props.name} />
         <img className={imageClasses} src={props.img} alt={props.name} />
       </div>
-      <div class="p-5">
+      <div className="p-5">
         <div>
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {props.name}
           </h5>
         </div>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {props.description}
         </p>
         <div className="flex justify-between items-center">
@@ -50,6 +51,7 @@ const MealItem = (props) => {
             ${props.price}
           </span>
           <MealItemForm onAddToCart={addToCartHandler} />
+
         </div>
       </div>
     </div>
