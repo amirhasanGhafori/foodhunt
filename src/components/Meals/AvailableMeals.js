@@ -40,6 +40,41 @@ const DUMMY_MEALS = [
     description: "Finest meat and potato and tomato",
     price: 36.0,
   },
+  {
+    id: "m6",
+    img: berger,
+    name: "Hamburger",
+    description: "Finest meat and potato and tomato",
+    price: 36.0,
+  },
+  {
+    id: "m7",
+    img: berger,
+    name: "Hamburger",
+    description: "Finest meat and potato and tomato",
+    price: 36.0,
+  },
+  {
+    id: "m8",
+    img: berger,
+    name: "Hamburger",
+    description: "Finest meat and potato and tomato",
+    price: 36.0,
+  },
+  {
+    id: "m9",
+    img: berger,
+    name: "Hamburger",
+    description: "Finest meat and potato and tomato",
+    price: 36.0,
+  },
+  {
+    id: "m10",
+    img: berger,
+    name: "Hamburger",
+    description: "Finest meat and potato and tomato",
+    price: 36.0,
+  },
 ];
 const AvailableMeals = () => {
   const MealsList = DUMMY_MEALS.map((meal) => (

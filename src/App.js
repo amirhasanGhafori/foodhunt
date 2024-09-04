@@ -4,6 +4,7 @@ import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/Cart";
 import Welcome from "./components/Layouts/Welcome";
 import CartProvider from "./store/CartProvider";
+import Footer from "./components/Layouts/Footer";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Cart />
         <Welcome />
         <Meals />
+        <Footer />
       </main>
     </CartProvider>
   );
