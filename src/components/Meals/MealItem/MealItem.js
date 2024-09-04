@@ -6,7 +6,7 @@ const MealItem = (props) => {
 
   const [shootImage,setShootImage] = useState(false);
   const [posstionShoot,setPossitionShoot] = useState(document.body.scrollWidth);
-  let imageClasses = `rounded-t-lg absolute max-h-80 opacity-100 ${shootImage && `transition-all tranform rotate-90 block opacity-0 -translate-y-44 duration-500 z-50 max-w-16 duration-500`}`;
+  let imageClasses = `rounded-t-lg absolute max-h-80 opacity-100 ${shootImage && `transition-all tranform rotate-90 block opacity-0 -translate-y-48 duration-500 z-50 max-w-16`}`;
 
   const cartCtx = useContext(CartContext);
 
